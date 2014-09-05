@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+     <TextView
+        android:id="@+id/welcome"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" 
+        android:text="@string/welcomeword"
+        android:textSize="28sp"/>
+        
+     <Button
+         android:id="@+id/T_load"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="15dp"
+         android:layout_marginBottom="15dp"
+         android:layout_below="@id/welcome"
+         android:layout_marginLeft="50dp"
+         android:layout_marginRight="50dp"
+         android:text="@string/useqq" />
+
+     <Button
+         android:id="@+id/G_load"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/T_load"
+         android:layout_marginTop="15dp"
+         android:layout_marginBottom="15dp"
+         android:layout_marginRight="50dp"
+         android:layout_marginLeft="50dp"
+         android:text="@string/usegmail" />
+     
+     <Button
+         android:id="@+id/detail"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/G_load"
+         android:layout_marginTop="15dp"
+         android:layout_marginBottom="15dp"
+         android:layout_marginRight="50dp"
+         android:layout_marginLeft="50dp"
+         android:text="@string/detail" />
+     
+     <Button
+         android:id="@+id/quit"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/detail"
+         android:layout_marginTop="15dp"
+         android:layout_marginBottom="15dp"
+         android:layout_marginRight="50dp"
+         android:layout_marginLeft="50dp"
+         android:text="@string/quit" />
+     
+</RelativeLayout>     
