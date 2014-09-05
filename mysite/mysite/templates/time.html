@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Successful Page</title>
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101128650" data-redirecturi="http://mobile.6test.com/success/" charset="utf-8"></script>
+<script type="text/javascript"
+src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" charset="utf-8" data-callback="true"></script>
+
+<head>
+<body>
+<h1>Thank you for your participation</h1>
+<p>You have successfully authenticated</p>
+<hr/>
+<p>It is now {{ current_date }}.</p>
+
+<p id="nicname"></p>
+<p id="sex"></p>
+<p id="information"></p>
+<p id="secret"></p>
+
+<script type="text/javascript">  
+var paras = {};  
+  
+QC.api("get_user_info", paras)  
+    .success(function(s){//成功回调  
+       document.getElementById("nicname").innerHTML="获取用户信息成功！当前用户昵称为："+s.data.nickname;  
+       document.getElementById("sex").innerHTML="获取用户信息成功！当前用户性别为："+s.data.gender;
+       // alert("获取用户信息成功！当前用户昵称为："+s.data.nickname);
+    })  
+    .error(function(f){//失败回调  
+        alert("获取用户信息失败！");  
+    })  
+    .complete(function(c){//完成请求回调  
+        alert("获取用户信息完成！");  
+    });  
+</script>
+
+<script type="text/javascript">  
+//从页面收集openapi必要的参数  
+var paras = {  
+    images:"http://y.photo.qq.com/img?s=OnbP8BwOF&l=y.jpg",  
+    title:"#QQlogin测试#我是标题啊标题",  
+    url:"http://connect.qq.com/",  
+    comment:"我是评论：转发原因",  
+    summary:"我是摘要：内容说明"  
+};  
+  
+//用jssdk调用openapi  
+QC.api("add_share", paras)  
+    .success(function(s){//请自行改写成功回调  
+        alert("分享成功，请到空间内查看！");  
+    })  
+    .error(function(f){//请自行改写失败回调  
+        alert("分享失败！");  
+    })  
+    .complete(function(c){//请自行改写完成请求回调  
+        alert("分享完成！");  
+    });  
+</script>  
+
+<script type="text/javascript">  
+var paras = {content : "#QQ互联JSSDK测试#曾经沧海难为水，除却巫山不是云。"};  
+  
+QC.api("add_t", paras)  
+    .success(function(s){//成功回调  
+        alert("发送微博成功，请到腾讯微博内查看！");  
+    })  
+    .error(function(f){//失败回调  
+        alert("发送微博失败！");  
+    })  
+    .complete(function(c){//完成请求回调  
+        alert("发送微博完成！");  
+    });  
+</script>  
+
+<script type="text/javascript">  
+if(QC.Login.check()){//如果已登录  
+    QC.Login.getMe(function(openId, accessToken){  
+          document.getElementById("information").innerHTML="当前登陆用户的OpenID为："+openId;
+          document.getElementById("secret").innerHTML="accessToken为："+accessToken;
+//        alert(["当前登录用户的", "openId为："+openId, "accessToken为："+accessToken].join("\n"));  
+    });  
+    //这里可以调用自己的保存接口  
+    //...  
+}  
+</script>
+
+</body>
+</html>

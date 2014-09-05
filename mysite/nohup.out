@@ -1,0 +1,1310 @@
+[19/Jun/2014 08:54:20] "GET / HTTP/1.1" 404 2129
+[19/Jun/2014 08:54:25] "GET /time/ HTTP/1.1" 200 63
+[19/Jun/2014 08:54:33] "GET /time/ HTTP/1.1" 200 63
+[19/Jun/2014 08:54:47] "GET /time/plus/4 HTTP/1.1" 301 0
+[19/Jun/2014 08:54:47] "GET /time/plus/4/ HTTP/1.1" 200 77
+[19/Jun/2014 08:58:28] "GET / HTTP/1.1" 404 2129
+[19/Jun/2014 09:03:31] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 09:08:16] "GET /time/plus/4 HTTP/1.1" 301 0
+[19/Jun/2014 09:08:16] "GET /time/plus/4/ HTTP/1.1" 200 77
+[19/Jun/2014 09:08:16] "GET /time/plus/4 HTTP/1.1" 301 0
+[19/Jun/2014 09:08:16] "GET /time/plus/4/ HTTP/1.1" 200 77
+[19/Jun/2014 09:10:09] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 09:39:00] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 10:02:06] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 10:20:57] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 12:13:21] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 12:49:14] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 12:50:56] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 13:24:01] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 14:03:54] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 14:31:35] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 14:32:20] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 14:35:10] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 14:46:42] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 14:57:32] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 15:30:38] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 15:39:33] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 15:46:51] "CONNECT mx3.mail2000.com.tw:25 HTTP/1.0" 404 1657
+[19/Jun/2014 15:50:40] "GET / HTTP/1.0" 404 2124
+[19/Jun/2014 16:05:52] "GET /invoker/EJBInvokerServlet HTTP/1.1" 404 2199
+[19/Jun/2014 16:08:27] "GET / HTTP/1.1" 404 2129
+[19/Jun/2014 16:08:35] "GET /time%E3%80%81 HTTP/1.1" 404 2156
+[19/Jun/2014 16:08:45] "GET /time/ HTTP/1.1" 200 63
+[19/Jun/2014 16:08:52] "GET / HTTP/1.1" 404 2129
+Validating models...
+
+0 errors found
+June 19, 2014 - 08:52:37
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[19/Jun/2014 16:10:34] "GET / HTTP/1.1" 200 63
+[19/Jun/2014 16:22:02] "GET /time??? HTTP/1.1" 301 0
+[19/Jun/2014 16:22:02] "GET /time/??? HTTP/1.1" 200 63
+[19/Jun/2014 16:22:04] "GET /time%E3%80%81 HTTP/1.1" 404 2258
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 129, in finish_response
+    self.close()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 33, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 422, in log_request
+    self.requestline, str(code), str(size))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 134, in log_message
+    if (self.path.startswith(self.admin_static_prefix)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 5: ordinal not in range(128)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 582, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 323, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 638, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 124, in handle
+    handler.run(self.server.get_app())
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 92, in run
+    self.close()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 33, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 422, in log_request
+    self.requestline, str(code), str(size))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 134, in log_message
+    if (self.path.startswith(self.admin_static_prefix)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 5: ordinal not in range(128)
+[19/Jun/2014 17:15:47] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 17:28:09] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 18:02:14] "CONNECT mx3.mail2000.com.tw:25 HTTP/1.0" 404 1657
+[19/Jun/2014 18:11:23] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 19:04:20] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 19:09:29] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 20:31:34] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 20:59:53] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 21:16:59] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 21:58:31] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 22:06:17] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 22:41:41] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 22:56:07] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 23:11:03] "GET / HTTP/1.0" 200 63
+[19/Jun/2014 23:41:00] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 00:02:05] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 00:13:57] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 00:21:13] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 00:33:30] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 01:28:48] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 02:13:52] "GET / HTTP/1.1" 200 63
+[20/Jun/2014 02:13:53] "GET /robots.txt HTTP/1.1" 404 2261
+[20/Jun/2014 03:00:30] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 03:18:03] "GET / HTTP/1.0" 200 63
+Validating models...
+
+0 errors found
+June 19, 2014 - 16:10:31
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('180.153.205.252', 33424)
+----------------------------------------
+Validating models...
+
+0 errors found
+June 20, 2014 - 03:35:09
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[20/Jun/2014 03:40:01] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 03:42:18] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 04:34:22] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 05:32:22] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 05:39:03] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 06:07:38] "GET http://24x7-allrequestsallowed.com/?PHPSESSID=1rxsxtj508015PS%5BJTTHY%40GQJFU HTTP/1.1" 404 1750
+[20/Jun/2014 06:10:40] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 06:30:24] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 06:55:44] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 07:02:32] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 07:09:54] "GET / HTTP/1.0" 200 63
+[20/Jun/2014 07:20:25] "GET / HTTP/1.1" 200 63
+Validating models...
+
+0 errors found
+June 20, 2014 - 03:35:39
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[20/Jun/2014 07:37:32] "GET / HTTP/1.1" 500 56224
+Validating models...
+
+0 errors found
+June 20, 2014 - 07:36:52
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[20/Jun/2014 07:38:39] "GET / HTTP/1.1" 500 56244
+Validating models...
+
+0 errors found
+June 20, 2014 - 07:38:36
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[20/Jun/2014 07:39:09] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 07:39:19] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 07:42:40] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 07:43:04] "GET / HTTP/1.1" 200 423
+Validating models...
+
+0 errors found
+June 20, 2014 - 07:39:08
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[20/Jun/2014 07:50:25] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 07:50:32] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 07:50:43] "GET /time HTTP/1.1" 301 0
+[20/Jun/2014 07:50:43] "GET /time/ HTTP/1.1" 200 63
+[20/Jun/2014 07:51:08] "GET /time/plus%E3%80%814 HTTP/1.1" 404 2273
+[20/Jun/2014 07:51:13] "GET /time/plus/4 HTTP/1.1" 301 0
+[20/Jun/2014 07:51:14] "GET /time/plus/4/ HTTP/1.1" 200 77
+[20/Jun/2014 07:51:24] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 07:51:39] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 07:56:31] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 07:59:05] "GET / HTTP/1.0" 200 423
+[20/Jun/2014 07:59:22] "GET / HTTP/1.0" 200 423
+[20/Jun/2014 08:01:59] "CONNECT mx3.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[20/Jun/2014 08:04:15] "GET /time HTTP/1.1" 301 0
+[20/Jun/2014 08:04:15] "GET /time/ HTTP/1.1" 200 63
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 129, in finish_response
+    self.close()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 33, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 422, in log_request
+    self.requestline, str(code), str(size))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 134, in log_message
+    if (self.path.startswith(self.admin_static_prefix)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 10: ordinal not in range(128)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 582, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 323, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 638, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 124, in handle
+    handler.run(self.server.get_app())
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 92, in run
+    self.close()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 33, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 422, in log_request
+    self.requestline, str(code), str(size))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 134, in log_message
+    if (self.path.startswith(self.admin_static_prefix)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 10: ordinal not in range(128)
+[20/Jun/2014 08:04:38] "GET /time/plus???4 HTTP/1.1" 404 2259
+[20/Jun/2014 08:04:41] "GET /time/plus%E3%80%814 HTTP/1.1" 404 2273
+[20/Jun/2014 08:04:42] "GET /time/plus/4 HTTP/1.1" 301 0
+[20/Jun/2014 08:04:43] "GET /time/plus/4/ HTTP/1.1" 200 77
+[20/Jun/2014 08:04:44] "GET /time/plus/4 HTTP/1.1" 301 0
+[20/Jun/2014 08:04:44] "GET /time/plus/4/ HTTP/1.1" 200 77
+[20/Jun/2014 08:06:40] "CONNECT mx2.mail2000.com.tw:25 HTTP/1.0" 404 1652
+Error: That port is already in use.
+[20/Jun/2014 08:07:41] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:07:50] "GET /time/ HTTP/1.1" 200 63
+[20/Jun/2014 08:07:57] "GET /time/ HTTP/1.1" 200 63
+[20/Jun/2014 08:08:02] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:11:24] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:12:23] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:12:30] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:12:30] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:12:36] "GET /time HTTP/1.1" 301 0
+[20/Jun/2014 08:12:36] "GET /time/ HTTP/1.1" 200 63
+[20/Jun/2014 08:12:43] "GET /time/ HTTP/1.1" 200 63
+[20/Jun/2014 08:13:55] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:15:20] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:15:23] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:15:31] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:15:34] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:15:37] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:15:41] "GET / HTTP/1.0" 200 423
+[20/Jun/2014 08:15:58] "GET / HTTP/1.0" 200 423
+Error: That port is already in use.
+Error: That port is already in use.
+[20/Jun/2014 08:22:45] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:24:01] "GET / HTTP/1.1" 200 423
+[20/Jun/2014 08:26:02] "GET /time HTTP/1.1" 301 0
+[20/Jun/2014 08:26:02] "GET /time/ HTTP/1.1" 200 63
+Validating models...
+
+0 errors found
+June 20, 2014 - 07:50:08
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('112.64.235.250', 39275)
+----------------------------------------
+[20/Jun/2014 08:46:16] "GET / HTTP/1.1" 200 427
+[20/Jun/2014 08:46:32] "GET / HTTP/1.1" 200 427
+[20/Jun/2014 08:46:39] "GET /time/ HTTP/1.1" 200 206
+[20/Jun/2014 08:47:48] "GET /time/ HTTP/1.1" 200 207
+[20/Jun/2014 08:47:50] "GET /time/ HTTP/1.1" 200 207
+[20/Jun/2014 08:49:35] "GET /time/ HTTP/1.1" 200 207
+Validating models...
+
+0 errors found
+June 20, 2014 - 08:46:10
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[20/Jun/2014 08:57:51] "GET /time/plus/3 HTTP/1.1" 301 0
+[20/Jun/2014 08:57:51] "GET /time/plus/3/ HTTP/1.1" 200 82
+Validating models...
+
+0 errors found
+June 20, 2014 - 08:52:49
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[20/Jun/2014 09:02:14] "GET /time/ HTTP/1.1" 404 2244
+[20/Jun/2014 09:02:24] "GET /sueccess/ HTTP/1.1" 404 2256
+[20/Jun/2014 09:02:42] "GET /success HTTP/1.1" 301 0
+[20/Jun/2014 09:02:42] "GET /success/ HTTP/1.1" 200 207
+[20/Jun/2014 09:06:08] "GET / HTTP/1.1" 200 492
+[20/Jun/2014 09:09:00] "GET / HTTP/1.1" 200 492
+[20/Jun/2014 09:10:56] "GET / HTTP/1.1" 200 492
+[20/Jun/2014 09:10:58] "GET / HTTP/1.1" 200 492
+[20/Jun/2014 09:11:17] "GET /time/plus/3 HTTP/1.1" 301 0
+[20/Jun/2014 09:11:17] "GET /time/plus/3/ HTTP/1.1" 200 82
+[20/Jun/2014 09:11:18] "GET /time/plus/3 HTTP/1.1" 301 0
+[20/Jun/2014 09:11:18] "GET /time/plus/3/ HTTP/1.1" 200 82
+[20/Jun/2014 09:15:51] "GET /sueccess HTTP/1.1" 404 2253
+[20/Jun/2014 09:15:51] "GET /sueccess HTTP/1.1" 404 2253
+[20/Jun/2014 09:16:08] "GET /success HTTP/1.1" 301 0
+[20/Jun/2014 09:16:08] "GET /success/ HTTP/1.1" 200 207
+[20/Jun/2014 09:16:12] "GET /success HTTP/1.1" 301 0
+[20/Jun/2014 09:16:15] "GET /success/ HTTP/1.1" 200 207
+[20/Jun/2014 09:17:46] "GET / HTTP/1.1" 200 517
+[20/Jun/2014 09:20:08] "GET / HTTP/1.1" 200 517
+[20/Jun/2014 09:20:21] "GET /success/? HTTP/1.1" 200 540
+[20/Jun/2014 09:21:59] "GET / HTTP/1.1" 200 517
+[20/Jun/2014 09:22:01] "GET / HTTP/1.1" 200 517
+[20/Jun/2014 09:22:07] "GET / HTTP/1.1" 200 517
+[20/Jun/2014 09:22:12] "GET /success/? HTTP/1.1" 200 540
+[20/Jun/2014 09:22:12] "GET / HTTP/1.1" 200 517
+[20/Jun/2014 09:22:13] "GET /success/ HTTP/1.1" 200 540
+[20/Jun/2014 09:22:50] "GET /success/? HTTP/1.1" 200 540
+[20/Jun/2014 09:32:42] "GET / HTTP/1.1" 200 517
+[20/Jun/2014 09:33:52] "GET /success HTTP/1.1" 301 0
+[20/Jun/2014 09:33:52] "GET /success/ HTTP/1.1" 200 540
+[20/Jun/2014 09:33:53] "GET /success/ HTTP/1.1" 200 540
+[20/Jun/2014 10:09:36] "GET /level/99/exec/show/config  HTTP/1.0" 404 2296
+[20/Jun/2014 10:43:33] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 11:11:38] "GET / HTTP/1.1" 200 517
+[20/Jun/2014 11:12:35] "GET /success/? HTTP/1.1" 200 541
+[20/Jun/2014 11:26:17] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 11:58:47] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 12:12:17] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 12:34:06] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[20/Jun/2014 12:34:13] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 13:12:08] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 13:30:41] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 13:42:48] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 13:49:12] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 15:15:47] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 15:58:00] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 16:00:22] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 16:48:21] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 17:06:31] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 17:22:58] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 17:23:02] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 18:12:48] "GET / HTTP/1.1" 200 517
+[20/Jun/2014 18:13:59] "GET /success/? HTTP/1.1" 200 540
+[20/Jun/2014 18:13:59] "GET /success HTTP/1.1" 301 0
+[20/Jun/2014 18:13:59] "GET /success/ HTTP/1.1" 200 540
+[20/Jun/2014 18:28:01] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 18:45:10] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 19:16:25] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 19:41:31] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 19:45:05] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 20:17:07] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 21:14:55] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 21:21:38] "HEAD / HTTP/1.0" 200 0
+[20/Jun/2014 21:25:51] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 21:39:58] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 21:59:45] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 22:28:48] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 22:33:11] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 22:38:17] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 22:53:38] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 22:55:29] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 23:13:02] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 23:17:09] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 23:25:08] "GET / HTTP/1.0" 200 517
+[20/Jun/2014 23:43:43] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[21/Jun/2014 00:22:26] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 01:02:27] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 01:21:03] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 02:43:25] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 03:23:01] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 04:09:21] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 04:09:59] "CONNECT mx3.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[21/Jun/2014 04:12:51] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 04:12:59] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 04:49:13] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 05:17:20] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 05:53:21] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 06:30:26] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 06:41:26] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 07:24:20] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 08:23:11] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 08:39:04] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 09:18:28] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 09:54:19] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 10:06:06] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 11:23:33] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 12:01:14] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 12:26:24] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 12:57:57] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 13:08:47] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 13:12:27] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 13:28:19] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 13:37:16] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 13:46:43] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 13:54:02] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 14:02:51] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 14:26:56] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 14:50:15] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 16:09:16] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 16:10:11] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 16:32:50] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 17:05:34] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 17:53:10] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 18:16:16] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 18:30:30] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 18:39:46] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 18:43:16] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 18:56:57] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 19:26:48] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 20:01:16] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 20:18:02] "CONNECT mx3.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[21/Jun/2014 20:52:35] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 21:05:41] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 21:08:09] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 21:51:10] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 21:54:47] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 22:10:45] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 22:19:01] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 22:24:48] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 22:46:28] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 23:03:31] "GET / HTTP/1.0" 200 517
+[21/Jun/2014 23:51:53] "GET / HTTP/1.1" 200 517
+[21/Jun/2014 23:51:54] "GET /robots.txt HTTP/1.1" 404 2259
+[22/Jun/2014 00:04:22] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 00:07:32] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 00:27:40] "GET /w00tw00t.at.blackhats.romanian.anti-sec:) HTTP/1.1" 404 2352
+[22/Jun/2014 00:27:40] "GET /phpMyAdmin/scripts/setup.php HTTP/1.1" 404 2313
+[22/Jun/2014 00:27:41] "GET /phpmyadmin/scripts/setup.php HTTP/1.1" 404 2313
+[22/Jun/2014 00:27:42] "GET /pma/scripts/setup.php HTTP/1.1" 404 2292
+[22/Jun/2014 00:27:42] "GET /myadmin/scripts/setup.php HTTP/1.1" 404 2304
+[22/Jun/2014 00:27:43] "GET /MyAdmin/scripts/setup.php HTTP/1.1" 404 2304
+[22/Jun/2014 00:50:58] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[22/Jun/2014 01:23:14] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 01:31:34] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 02:31:31] "CONNECT mx3.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[22/Jun/2014 02:44:36] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[22/Jun/2014 02:55:35] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 02:58:47] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 03:38:32] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 03:40:34] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 03:50:31] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 04:35:04] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 04:55:52] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 05:55:52] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 05:59:24] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 06:01:06] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 06:14:16] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 06:36:18] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 07:15:04] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 07:43:28] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 08:12:54] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 08:41:38] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 08:55:53] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 09:07:17] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 09:35:19] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 10:13:04] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 10:17:29] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 11:20:56] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 11:29:29] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 11:35:39] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 11:56:43] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 12:10:00] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 12:28:18] "GET /manager/html HTTP/1.1" 404 2265
+[22/Jun/2014 12:36:58] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 13:05:50] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 13:26:52] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 13:34:04] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 13:45:26] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 13:45:47] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 13:52:06] "GET / HTTP/1.1" 200 517
+[22/Jun/2014 14:44:33] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 14:53:54] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 15:44:43] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 15:58:29] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 16:04:11] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 16:04:37] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[22/Jun/2014 16:21:40] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 16:36:07] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 16:37:50] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 17:07:37] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 17:13:37] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 17:20:30] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 17:20:50] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 17:31:07] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 17:47:38] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 18:12:26] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 18:20:48] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 18:46:40] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 18:50:04] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 19:01:29] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 19:05:08] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 19:49:56] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 20:19:45] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 20:54:03] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 20:59:07] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[22/Jun/2014 21:16:04] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 21:24:09] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 21:33:18] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 22:00:52] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 22:24:55] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 22:50:46] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 22:52:16] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 22:59:27] "GET / HTTP/1.0" 200 517
+[22/Jun/2014 23:39:44] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 00:45:01] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 00:48:57] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 01:10:49] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 01:55:32] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 02:22:38] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 02:26:23] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 03:13:17] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 03:13:34] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 03:14:40] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 03:29:18] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 04:21:44] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 04:26:44] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 05:00:17] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 05:02:16] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 05:02:21] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 05:08:50] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 05:45:50] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 06:09:14] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 06:26:53] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 07:54:46] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 08:15:36] "GET / HTTP/1.1" 200 517
+[23/Jun/2014 08:15:52] "GET /success/? HTTP/1.1" 200 540
+[23/Jun/2014 08:27:48] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 08:29:22] "GET /success HTTP/1.1" 301 0
+[23/Jun/2014 08:29:22] "GET /success/ HTTP/1.1" 200 540
+[23/Jun/2014 08:51:27] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 09:28:35] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 09:29:55] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 09:44:24] "GET /manager/html HTTP/1.1" 404 2265
+[23/Jun/2014 10:43:48] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 11:36:43] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 11:58:02] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 13:06:21] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 14:09:57] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 14:12:42] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 14:18:48] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 14:37:33] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 15:14:42] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 15:16:43] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 15:50:41] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 16:14:28] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 16:14:50] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 17:08:07] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 17:18:08] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 17:24:54] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 17:45:19] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 17:49:24] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 17:51:53] "GET / HTTP/1.1" 200 517
+[23/Jun/2014 18:03:05] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 19:29:42] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 19:33:54] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 20:09:54] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 21:16:14] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 22:00:32] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 22:50:57] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 23:14:14] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 23:32:39] "GET / HTTP/1.0" 200 517
+[23/Jun/2014 23:44:34] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 00:14:54] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 00:22:48] "GET /include/shell.php?x=x HTTP/1.0" 404 2284
+[24/Jun/2014 00:28:36] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 00:35:43] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 00:40:30] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 01:14:33] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 01:45:11] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 02:08:58] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 02:22:55] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 02:46:24] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 03:13:47] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 03:42:23] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 03:45:41] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 03:58:36] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 04:27:06] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 05:29:08] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 05:31:52] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 05:39:16] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 06:30:49] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 06:42:44] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 06:51:03] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 07:19:20] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 07:33:46] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 07:42:23] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 07:52:56] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 08:12:09] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 08:59:40] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 09:06:50] "GET /manager/html HTTP/1.1" 404 2265
+[24/Jun/2014 09:09:10] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 09:11:10] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 09:14:35] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 09:35:17] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 10:06:30] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 10:26:42] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 10:45:04] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 10:50:56] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 11:27:37] "GET / HTTP/1.0" 200 517
+Validating models...
+
+0 errors found
+June 20, 2014 - 09:02:09
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[24/Jun/2014 11:35:26] "GET / HTTP/1.1" 500 74479
+[24/Jun/2014 11:35:52] "GET / HTTP/1.1" 500 85031
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 127, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 215, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 582, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 323, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 640, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 693, in finish
+    self.wfile.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[24/Jun/2014 11:38:51] "GET / HTTP/1.1" 500 84313
+[24/Jun/2014 11:38:54] "GET / HTTP/1.1" 500 84313
+[24/Jun/2014 11:39:05] "GET / HTTP/1.1" 500 84313
+[24/Jun/2014 11:39:42] "GET / HTTP/1.1" 500 84313
+[24/Jun/2014 11:42:33] "GET / HTTP/1.1" 500 84527
+[24/Jun/2014 11:47:06] "GET / HTTP/1.1" 500 84537
+[24/Jun/2014 11:47:14] "GET /success HTTP/1.1" 301 0
+[24/Jun/2014 11:47:15] "GET /success/ HTTP/1.1" 200 541
+[24/Jun/2014 11:47:33] "GET / HTTP/1.1" 500 84545
+Validating models...
+
+0 errors found
+June 24, 2014 - 11:34:37
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('113.12.59.59', 35801)
+----------------------------------------
+[24/Jun/2014 11:50:25] "GET / HTTP/1.1" 500 72960
+[24/Jun/2014 11:50:48] "GET / HTTP/1.1" 200 517
+[24/Jun/2014 11:51:45] "GET /success/? HTTP/1.1" 200 541
+[24/Jun/2014 11:56:03] "GET /success/? HTTP/1.1" 200 2539
+[24/Jun/2014 11:58:19] "GET /success/? HTTP/1.1" 200 2539
+[24/Jun/2014 13:23:50] "POST /cgi-bin/php5?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 2832
+[24/Jun/2014 13:23:50] "POST /cgi-bin/php.cgi?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 2841
+[24/Jun/2014 13:23:50] "POST /cgi-bin/php-cgi?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 2841
+[24/Jun/2014 13:23:50] "POST /cgi-bin/php?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 2829
+[24/Jun/2014 13:23:50] "POST /cgi-bin/php4?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 2832
+[24/Jun/2014 13:32:17] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 13:34:47] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 13:38:55] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 13:41:13] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 14:06:40] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 14:18:55] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 14:36:42] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 14:46:53] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 14:55:45] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 14:59:30] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 15:32:15] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 16:21:28] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 17:05:12] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 17:21:27] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 17:53:35] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 18:38:56] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 18:45:00] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 21:15:59] "GET /rutorrent HTTP/1.1" 404 2256
+[24/Jun/2014 21:16:17] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 21:22:41] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 21:42:36] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 21:50:08] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 21:52:17] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 23:28:49] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 23:41:36] "GET / HTTP/1.0" 200 517
+[24/Jun/2014 23:43:46] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 00:03:52] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 00:04:50] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[25/Jun/2014 01:26:14] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 02:07:28] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 02:15:47] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 02:32:58] "GET / HTTP/1.1" 200 517
+[25/Jun/2014 02:35:48] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 02:47:49] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 02:54:37] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 03:04:43] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 03:33:09] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 03:40:16] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 03:59:32] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 04:01:36] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 04:16:49] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 04:21:51] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 05:36:27] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 05:37:30] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 05:55:56] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 06:37:51] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 07:39:46] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 07:59:15] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 08:04:02] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 08:05:06] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 08:05:52] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 08:22:32] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 08:33:53] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 08:42:22] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 08:51:29] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 09:14:59] "GET / HTTP/1.1" 200 517
+[25/Jun/2014 09:15:42] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 09:26:02] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 09:55:10] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 10:51:24] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 11:04:15] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 11:05:01] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 11:33:38] "GET /manager/html HTTP/1.1" 404 2265
+[25/Jun/2014 12:42:23] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 13:38:00] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 13:53:36] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 14:13:56] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 14:25:31] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 14:54:42] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 15:22:45] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 15:29:16] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 16:11:30] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 16:17:34] "GET /rutorrent HTTP/1.0" 404 2248
+[25/Jun/2014 16:47:47] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 17:27:28] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 17:36:56] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 18:01:32] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 19:11:41] "CONNECT mx3.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[25/Jun/2014 19:33:34] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 19:48:51] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 20:20:22] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 21:10:47] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 21:46:05] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 22:16:27] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 22:30:02] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 22:37:47] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 22:39:54] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 22:42:31] "GET / HTTP/1.0" 200 517
+[25/Jun/2014 22:50:19] "CONNECT mx3.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[25/Jun/2014 22:55:23] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 00:42:28] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 00:50:48] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 01:16:50] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 01:40:36] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 01:42:05] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 01:58:48] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 02:19:59] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 02:21:13] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 02:24:28] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 03:39:07] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 03:51:46] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 04:04:45] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 04:16:50] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 04:33:17] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[26/Jun/2014 05:25:24] "GET http://proxyjudge.us/ HTTP/1.0" 404 1652
+[26/Jun/2014 05:25:32] "GET http://www.anonymousproxylist.net/azenv2.php HTTP/1.0" 404 1734
+[26/Jun/2014 05:26:17] "GET http://www.proxyjudge.biz/az.php HTTP/1.0" 404 1690
+[26/Jun/2014 05:26:25] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 05:38:24] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 06:11:24] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 06:18:40] "GET /manager/html HTTP/1.1" 404 2265
+[26/Jun/2014 06:26:34] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 07:00:28] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 07:03:32] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 07:07:32] "GET / HTTP/1.1" 200 517
+[26/Jun/2014 07:07:42] "GET /success/? HTTP/1.1" 200 2538
+[26/Jun/2014 07:19:09] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 07:20:58] "GET / HTTP/1.1" 200 517
+[26/Jun/2014 07:21:09] "GET /success/ HTTP/1.1" 200 2538
+[26/Jun/2014 07:21:09] "GET /success HTTP/1.1" 301 0
+[26/Jun/2014 07:21:09] "GET /success/ HTTP/1.1" 200 2538
+[26/Jun/2014 07:21:29] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 07:32:27] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 07:36:35] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 07:56:07] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 07:56:13] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 08:14:39] "GET /success/? HTTP/1.1" 200 2538
+[26/Jun/2014 08:17:54] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 09:05:35] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 09:11:38] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 09:18:14] "GET http://www.daydaydata.com/proxy.txt HTTP/1.1" 404 1699
+[26/Jun/2014 09:19:44] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 09:25:33] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 09:29:09] "GET /invoker/EJBInvokerServlet HTTP/1.1" 404 2304
+[26/Jun/2014 09:30:24] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 09:51:56] "GET http://proxyjudge.us/ HTTP/1.0" 404 1652
+[26/Jun/2014 10:01:40] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 10:04:37] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 10:38:48] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 11:58:42] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 12:06:43] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 12:18:31] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 12:18:58] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 12:30:41] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 12:35:57] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 13:03:58] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 14:19:35] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 14:28:22] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 15:09:03] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 15:20:09] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 15:24:00] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 16:05:42] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 16:35:46] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 16:41:46] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 16:49:22] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 17:37:46] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 18:05:04] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 18:07:46] "GET /CFIDE/administrator/ HTTP/1.1" 404 2289
+[26/Jun/2014 19:11:24] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 19:22:46] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 19:27:37] "GET /recordings/theme/iefixes.css HTTP/1.1" 404 2313
+[26/Jun/2014 19:38:12] "GET /manager/html HTTP/1.1" 404 2265
+[26/Jun/2014 20:00:01] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 20:11:09] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 20:58:56] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 21:32:40] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 21:47:40] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 22:25:42] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 22:26:02] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 22:31:37] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 23:05:07] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 23:22:44] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 23:23:52] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 23:27:55] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 23:29:42] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 23:52:15] "GET / HTTP/1.0" 200 517
+[26/Jun/2014 23:55:36] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 00:10:48] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 00:51:25] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 01:39:07] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 01:44:33] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 01:56:22] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 02:03:39] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 02:58:49] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 03:06:16] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 03:13:21] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 03:53:35] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 04:05:31] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 05:04:59] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 05:17:25] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 05:29:19] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 05:44:53] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 06:00:12] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 06:42:55] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 06:48:05] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 07:23:19] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 07:26:01] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 08:05:39] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 08:17:59] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 08:57:46] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 09:01:36] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 09:07:39] "GET /recordings/theme/iefixes.css HTTP/1.1" 404 2313
+[27/Jun/2014 09:12:13] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 09:18:50] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 10:28:28] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 10:30:10] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 10:57:44] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 11:02:43] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 11:07:56] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 11:15:25] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 11:21:37] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 11:24:37] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 11:36:07] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 11:47:39] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 11:53:41] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 12:12:00] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 13:23:14] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 13:48:22] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 13:52:39] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 13:56:57] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 14:19:37] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 14:20:51] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 14:36:29] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 15:57:45] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 16:44:05] "CONNECT mx3.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[27/Jun/2014 17:03:25] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 17:15:37] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 18:03:51] "GET /manager/html HTTP/1.1" 404 2265
+[27/Jun/2014 18:07:50] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 18:25:03] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 18:33:20] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 18:57:39] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 19:25:50] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 20:12:39] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 20:29:37] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 20:55:05] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 22:19:15] code 400, message Bad HTTP/0.9 request type ('\x80w\x01\x03\x01\x00N\x00\x00\x00')
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 582, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 323, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 638, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 117, in handle
+    if not self.parse_request(): # An error code has been sent, just exit
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 281, in parse_request
+    "Bad HTTP/0.9 request type (%r)" % command)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 368, in send_error
+    self.send_response(code, message)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 385, in send_response
+    self.log_request(code)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 422, in log_request
+    self.requestline, str(code), str(size))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 138, in log_message
+    msg = "[%s] %s\n" % (self.log_date_time_string(), format % args)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0x80 in position 1: ordinal not in range(128)
+[27/Jun/2014 22:19:16] "GET /HNAP1/ HTTP/1.1" 404 2247
+[27/Jun/2014 22:42:34] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 23:09:12] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 23:10:17] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 23:16:30] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 23:16:57] "CONNECT mx2.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[27/Jun/2014 23:20:03] "GET / HTTP/1.0" 200 517
+[27/Jun/2014 23:38:59] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 00:13:43] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 00:14:40] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 00:41:28] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 01:06:29] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 01:06:43] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 01:38:31] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 02:15:32] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 03:09:48] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 03:27:43] "CONNECT mx2.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[28/Jun/2014 04:06:33] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 04:25:52] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 04:26:14] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 04:34:12] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 04:42:40] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 04:58:48] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 06:17:38] "GET //cgi-bin/php HTTP/1.1" 404 2264
+[28/Jun/2014 06:17:39] "GET //cgi-bin/php5 HTTP/1.1" 404 2267
+[28/Jun/2014 06:17:39] "GET //cgi-bin/php-cgi HTTP/1.1" 404 2276
+[28/Jun/2014 06:17:40] "GET //cgi-bin/php.cgi HTTP/1.1" 404 2276
+[28/Jun/2014 06:17:41] "GET //cgi-bin/php4 HTTP/1.1" 404 2267
+[28/Jun/2014 06:32:43] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 06:41:32] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 06:58:17] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 07:01:19] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 07:25:27] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 07:43:24] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 08:00:59] "HEAD /webdav/ HTTP/1.1" 404 0
+[28/Jun/2014 08:18:58] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 08:23:41] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 08:36:42] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 08:51:07] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 08:56:16] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 08:56:40] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 09:25:54] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 10:02:40] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 10:34:49] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 11:13:54] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 12:03:09] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 12:14:07] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 12:17:37] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 12:28:13] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 12:52:00] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 13:13:52] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 13:17:23] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 13:49:02] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 14:13:43] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 14:21:56] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 15:08:21] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 15:41:29] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 16:28:21] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 16:32:07] "GET /manager/html HTTP/1.1" 404 2265
+[28/Jun/2014 16:46:08] ""GET /cgi-bin/php HTTP/1.0 " 404 2260
+[28/Jun/2014 17:43:49] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 17:56:59] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 18:31:11] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 18:31:54] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 19:04:14] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 19:21:36] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 19:21:55] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 20:53:19] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 21:35:05] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 21:42:10] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 22:22:44] "GET / HTTP/1.0" 200 517
+[28/Jun/2014 23:12:42] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 00:19:29] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 00:40:07] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 00:47:41] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 00:58:55] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 01:17:42] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 01:32:41] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 01:48:54] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 01:58:01] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 02:05:04] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 02:28:23] "GET http://85.17.141.182/proxychecker/check.cgi?action=getinfo HTTP/1.1" 404 1733
+[29/Jun/2014 02:34:45] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 03:00:25] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 03:03:52] "HEAD / HTTP/1.0" 200 0
+[29/Jun/2014 03:39:34] "GET http://proxyjudge.us/ HTTP/1.0" 404 1652
+[29/Jun/2014 03:39:47] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 03:49:48] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[29/Jun/2014 04:20:28] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[29/Jun/2014 05:05:47] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 06:06:09] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 06:11:09] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 07:05:02] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 07:07:40] "GET http://10086.cn/bj/ HTTP/1.1" 404 1641
+[29/Jun/2014 07:53:38] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 08:19:34] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 08:58:53] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 09:10:14] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 09:15:12] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[29/Jun/2014 10:20:13] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 10:33:44] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 10:38:45] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 10:39:52] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 10:53:18] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 11:17:25] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 11:30:23] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 11:37:36] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 11:40:10] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 13:12:20] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 13:28:52] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 13:34:18] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 14:24:06] "CONNECT mx0.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[29/Jun/2014 14:53:55] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 15:25:35] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 15:37:32] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 16:46:59] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 17:24:22] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 18:40:22] "CONNECT mx3.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[29/Jun/2014 18:44:52] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 18:46:53] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 18:48:00] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 19:32:53] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 19:55:48] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 20:04:17] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 20:17:22] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 20:33:41] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 21:02:39] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 21:37:38] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 21:41:24] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 21:42:50] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 21:48:40] "GET http://proxyjudge.us/ HTTP/1.0" 404 1652
+[29/Jun/2014 21:52:44] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 22:00:10] "GET / HTTP/1.0" 200 517
+[29/Jun/2014 23:34:54] "GET http://www.anonymousproxylist.net/azenv2.php HTTP/1.0" 404 1734
+[30/Jun/2014 00:57:21] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 01:27:27] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 01:57:47] "GET / HTTP/1.1" 200 517
+[30/Jun/2014 01:57:51] "GET / HTTP/1.1" 200 517
+[30/Jun/2014 02:01:30] "GET / HTTP/1.1" 200 517
+[30/Jun/2014 02:12:43] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 02:56:04] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 03:08:36] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 03:59:47] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 04:05:01] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 04:13:54] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 04:38:43] "GET http://proxyjudge.us/ HTTP/1.0" 404 1652
+[30/Jun/2014 04:38:51] "GET http://proxyjudge.us/ HTTP/1.0" 404 1652
+[30/Jun/2014 04:38:58] "GET http://www.mesregies.com/azz.php HTTP/1.0" 404 1689
+[30/Jun/2014 05:44:58] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 06:12:02] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 06:14:33] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 06:17:01] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 06:56:13] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 07:37:46] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 07:44:10] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 08:13:52] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 08:20:40] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 09:08:24] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 09:19:30] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 09:43:11] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 10:27:53] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 12:15:46] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 13:32:54] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 14:25:00] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 14:27:49] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 14:41:05] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 14:51:05] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 14:57:39] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 15:26:46] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 15:33:07] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 15:41:48] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 15:51:19] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 15:52:04] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 16:14:17] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 16:54:30] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 17:57:55] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 18:24:21] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 18:50:01] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 19:25:44] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 19:27:28] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 20:35:34] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 20:40:53] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 20:51:46] "GET /manager/html HTTP/1.1" 404 2265
+[30/Jun/2014 20:55:39] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 21:04:47] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 21:18:34] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 21:22:49] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 21:54:33] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 22:17:52] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 22:18:18] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 22:29:11] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 22:38:06] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 22:42:04] "GET / HTTP/1.0" 200 517
+[30/Jun/2014 23:57:28] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 00:00:42] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 01:14:37] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 01:28:31] "GET http://todd0738.gotoip4.com//hello.html HTTP/1.1" 404 1713
+[01/Jul/2014 02:03:01] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 02:06:35] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 02:22:36] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 02:47:14] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 03:45:44] "POST / HTTP/1.1" 403 2282
+[01/Jul/2014 04:02:01] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 05:13:24] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 05:25:28] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 05:46:22] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 05:51:53] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 06:11:46] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 06:42:52] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 06:52:05] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 07:03:10] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 07:24:54] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 07:34:30] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 07:46:08] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 08:17:33] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 08:35:06] "GET / HTTP/1.1" 200 517
+[01/Jul/2014 08:35:09] "GET / HTTP/1.1" 200 517
+[01/Jul/2014 08:35:16] "GET /success/? HTTP/1.1" 200 2553
+[01/Jul/2014 08:35:50] "GET /success/? HTTP/1.1" 200 2553
+[01/Jul/2014 08:40:27] "GET /success/? HTTP/1.1" 200 2575
+[01/Jul/2014 08:42:25] "GET /success/? HTTP/1.1" 200 2596
+[01/Jul/2014 08:48:37] "GET / HTTP/1.1" 200 517
+[01/Jul/2014 08:48:42] "GET /success HTTP/1.1" 301 0
+[01/Jul/2014 08:48:42] "GET /success/ HTTP/1.1" 200 2596
+[01/Jul/2014 08:48:45] "GET /success/ HTTP/1.1" 200 2596
+[01/Jul/2014 08:50:42] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 08:57:23] "GET /success/? HTTP/1.1" 200 2850
+[01/Jul/2014 08:58:30] "GET /success/? HTTP/1.1" 200 2813
+[01/Jul/2014 09:00:14] "GET /success/? HTTP/1.1" 200 2811
+[01/Jul/2014 09:01:50] "GET /success/? HTTP/1.1" 200 2851
+[01/Jul/2014 09:02:52] "GET /success/? HTTP/1.1" 200 2846
+[01/Jul/2014 09:04:38] "GET /success/? HTTP/1.1" 200 2921
+[01/Jul/2014 09:06:19] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 09:07:57] "GET / HTTP/1.1" 200 517
+[01/Jul/2014 09:07:59] "GET / HTTP/1.1" 200 517
+[01/Jul/2014 09:13:43] "GET /success/? HTTP/1.1" 200 3055
+[01/Jul/2014 09:17:46] "GET / HTTP/1.1" 200 517
+[01/Jul/2014 09:17:54] "GET /success/? HTTP/1.1" 200 3055
+[01/Jul/2014 09:18:04] "GET / HTTP/1.1" 200 517
+[01/Jul/2014 09:20:21] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 09:23:09] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 09:45:27] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 09:52:56] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 09:58:49] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 10:03:20] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 11:21:37] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 12:18:52] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 12:42:42] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 12:43:40] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 12:50:33] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 13:56:18] "GET / HTTP/1.0" 200 517
+Validating models...
+
+0 errors found
+June 24, 2014 - 11:50:03
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('76.14.104.22', 59827)
+----------------------------------------
+[01/Jul/2014 14:04:07] "GET / HTTP/1.1" 200 517
+[01/Jul/2014 14:12:00] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 14:16:23] "GET / HTTP/1.1" 200 517
+[01/Jul/2014 14:29:35] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 15:19:16] "GET /manager/html HTTP/1.1" 404 2265
+[01/Jul/2014 15:19:58] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 15:36:38] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 16:30:04] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 16:40:18] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 16:47:25] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 16:53:45] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 17:49:20] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 18:09:41] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 18:50:48] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 18:59:58] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 19:21:25] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 19:48:37] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 20:08:59] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 20:10:03] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 20:31:29] "GET / HTTP/1.0" 200 517
+[01/Jul/2014 23:08:30] "CONNECT mx2.mail2000.com.tw:25 HTTP/1.0" 404 1652
+[01/Jul/2014 23:23:20] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 00:28:53] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 00:42:27] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 00:54:49] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 01:24:22] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 01:29:42] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 01:50:36] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 01:53:26] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 01:54:07] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 02:00:42] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 02:01:25] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 02:17:43] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 02:26:39] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 02:49:05] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 03:06:35] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 03:30:19] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 03:40:04] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 03:41:20] "POST /cgi-bin/php?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 2829
+[02/Jul/2014 03:41:20] "POST /cgi-bin/php5?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 2832
+[02/Jul/2014 03:41:21] "POST /cgi-bin/php-cgi?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 2841
+[02/Jul/2014 03:41:22] "POST /cgi-bin/php.cgi?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 2841
+[02/Jul/2014 03:41:23] "POST /cgi-bin/php4?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 2832
+[02/Jul/2014 03:54:16] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 04:16:55] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 04:42:32] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 04:44:20] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 04:46:49] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 05:41:00] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 05:51:40] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 06:07:05] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 06:08:39] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 06:09:30] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 06:16:37] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 07:20:30] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 07:31:18] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 07:54:14] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 07:57:06] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 08:09:26] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 08:09:45] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 08:35:48] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 09:01:50] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 10:52:43] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 10:59:04] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 11:04:08] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 12:16:41] "GET / HTTP/1.0" 200 517
+[02/Jul/2014 12:20:12] "GET / HTTP/1.0" 200 517
+Validating models...
+
+0 errors found
+July 01, 2014 - 13:58:25
+Django version 1.6.2, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 399, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 392, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 242, in run_from_argv
+    self.execute(*args, **options.__dict__)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 280, in execute
+    translation.activate('en-us')
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/__init__.py", line 130, in activate
+    return _trans.activate(language)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 188, in activate
+    _active.value = translation(language)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 177, in translation
+    default_translation = _fetch(settings.LANGUAGE_CODE)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 159, in _fetch
+    app = import_module(appname)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named info
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 399, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 392, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 242, in run_from_argv
+    self.execute(*args, **options.__dict__)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 280, in execute
+    translation.activate('en-us')
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/__init__.py", line 130, in activate
+    return _trans.activate(language)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 188, in activate
+    _active.value = translation(language)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 177, in translation
+    default_translation = _fetch(settings.LANGUAGE_CODE)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 159, in _fetch
+    app = import_module(appname)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named info
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 399, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 392, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 242, in run_from_argv
+    self.execute(*args, **options.__dict__)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 280, in execute
+    translation.activate('en-us')
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/__init__.py", line 130, in activate
+    return _trans.activate(language)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 188, in activate
+    _active.value = translation(language)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 177, in translation
+    default_translation = _fetch(settings.LANGUAGE_CODE)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 159, in _fetch
+    app = import_module(appname)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named info
